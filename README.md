@@ -58,7 +58,7 @@ The Fed expresses its stance in hedged language, so general sentiment tools ofte
 - **Backup plan:** report results on the official test split alongside our document-grouped and time-based splits, and train a minutes-only variant to compare. If the recovered dates fail the spot check, fall back to document-grouped splits only.
 - **Next two actions:**
   1. [Team member], by [date]: spot-check recovered documents against federalreserve.gov, then run the TF-IDF baseline on document-grouped and time-based splits.
-  2. [Team member], by [date]: write and test the 2023 to 2026 minutes scraper and add minutes release dates to the data.
+  2. [Team member], by [date]: write and test the 2023 to 2026 minutes scraper 
 
 ## 8. Possible Method and Evaluation (Optional)
 - **Methods:** TF-IDF + logistic regression baseline; zero-shot FinBERT (trained for general financial sentiment, so we expect it to do poorly); fine-tuned FinBERT and RoBERTa; a meeting-level tone score with logistic regression for the next decision, using only minutes released before that decision (the previous meeting's minutes from 2005 on, two meetings back before then), with walk-forward validation against a "repeat the last move" baseline; event-window analysis of yield changes on minutes release days against tone change.
