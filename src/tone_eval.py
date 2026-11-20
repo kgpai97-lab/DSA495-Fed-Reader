@@ -25,6 +25,8 @@ def score(y_true, y_pred):
         "n": len(y_true),
         "accuracy": accuracy_score(y_true, y_pred),
         "macro_f1": f1_score(y_true, y_pred, average="macro", labels=[0, 1, 2], zero_division=0),
+        # weighted F1 is what Shah et al. (2023) report, so this column is comparable to their Table 5
+        "weighted_f1": f1_score(y_true, y_pred, average="weighted", labels=[0, 1, 2], zero_division=0),
     }
 
 
